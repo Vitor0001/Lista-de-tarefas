@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Teste de lista</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregar()">
+   <header>
+      <h1>Lista de tarefas</h1>
+   </header>
+   <main>
+      <input type="text" id="Add" placeholder="Adicionar tarefa."><button onclick="salvar()">Salvar</button><button onclick="carregar()">Carregar</button>
+   <ul id="lista">
+         <li id="1"><span class="texto">1ª tarefa.</span><span class="remove">&#x1F5D9;</span><span class="edit">&#x1F589;</span></li>
+         <li id="2"><span class="texto">2ª tarefa.</span><span class="remove">&#x1F5D9;</span><span class="edit">&#x1F589;</span></li>
+         <li id="3"><span class="texto">3ª tarefa.</span><span class="remove">&#x1F5D9;</span><span class="edit">&#x1F589;</span></li>
+         <li id="4"><span class="texto">4ª tarefa.</span><span class="remove">&#x1F5D9;</span><span class="edit">&#x1F589;</span></li>
+         <li id="5"><span class="texto">5ª tarefa.</span><span class="remove">&#x1F5D9;</span><span class="edit">&#x1F589;</span>
+         </li>
+      </ul>
+      <button onclick="apagarCache()">Apagar dados</button> <input type="checkbox" id="modo">&#x263E;
+   </main>
+</body>
+<script src="script.js"></script>
+</html>
