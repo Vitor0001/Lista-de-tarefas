@@ -50,7 +50,7 @@ lista.addEventListener('dblclick',(e=>{
    }
 }))
 let modo = document.getElementById('modo')
-modo.addEventListener('click' , function(){
+modo.addEventListener('click' , function tema(){
    if(modo.checked == true){
       document.body.style.setProperty('--cor-de-fundo', '#1f1f1f')
       document.body.style.setProperty('--cor-da-fonte', 'white')
@@ -64,12 +64,25 @@ modo.addEventListener('click' , function(){
 
 function salvar(){
    localStorage.setItem('Tarefas', lista.innerHTML)
+   localStorage.setItem('TarefaTxt', lista.innerText)
+   localStorage.setItem('Modo', Boolean(modo.checked))
 }
 function carregar(){
-   if(localStorage.getItem('tarefa') == '' || localStorage.getItem('Tarefas') == null){
-      window.alert('Nenhuma tarefa salva.')
+   if(localStorage.getItem('TarefaTxt') == false){
+      window.alert('Nenhuma tarefa salva')
    }else{
       lista.innerHTML = localStorage.getItem('Tarefas')
+   }
+   modo.checked = localStorage.getItem('Modo')
+   console.log(modo.checked)
+   if(modo.checked == true){
+      document.body.style.setProperty('--cor-de-fundo', '#1f1f1f')
+      document.body.style.setProperty('--cor-da-fonte', 'white')
+      document.body.style.setProperty('--cor-da-lista', '#555555')
+   }else{
+      document.body.style.setProperty('--cor-de-fundo', '#d2d2d2')
+      document.body.style.setProperty('--cor-da-fonte', 'black')
+      document.body.style.setProperty('--cor-da-lista', 'white')
    }
 }
 function apagarCache(){
@@ -82,4 +95,3 @@ function apagarCache(){
       console.log('Dados preservados.')
    }
 }
-console.log('opa')
