@@ -45,6 +45,13 @@ button{
    color: var(--cor-da-fonte);
    border: 1px solid gray;
 }
+button::hover{
+   background-color: var(--cor-de-fundo);
+}
+a{
+   text-decoration: none;
+   color: var(--cor-da-fonte);
+}
 span{
    color: var(--cor-da-fonte);
 
