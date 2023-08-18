@@ -73,7 +73,8 @@ span.edit:hover , span.remove:hover{
 }
 #relogio{
    width: 126px;
-   border: 2px solid var(--cor-de-fundo);
+   border: 1px solid gray;
+   border-radius: 2px;
    padding: 3px;
    margin: auto;
 }
