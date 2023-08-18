@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Lista de tarefas.</title>
-   <link rel="stylesheet" href="lista de tarefas/style.css">
+   <link rel="stylesheet" href="lista de tarefas/Estilos/style.css">
 </head>
 <body onload="carregar()">
    <header>
@@ -21,9 +21,17 @@
          </li>
       </ul>
       <button onclick="apagarCache()">Apagar dados</button>
-      <button><a href="Agenda/index.html">Agenda</a></button>
       <input type="checkbox" id="modo">&#x263E;
+      <h2>Temporizador</h2>
+      <div id="relogio">
+         <input type="number" class="ponteiro" id="hora" max="22" min="0" value="00">:
+         <input type="number" class="ponteiro" id="minuto" max="59" min="0" value="00">:
+         <input type="number" class="ponteiro" id="segundo" max="59" min="0" value="00">
+            <button id="comecar">Começar</button>
+      </div>
    </main>
+   <audio src="lista de tarefas/sons/alarm-clock-short-6402.mp3" id="alarme"></audio>
 </body>
-<script src="lista de tarefas/script.js"></script>
+<script src="lista de tarefas/Scripts/clock.js"></script>
+<script src="lista de tarefas/Scripts/lista.js"></script>
 </html>

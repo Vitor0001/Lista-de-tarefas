@@ -75,7 +75,7 @@ function carregar(){
       lista.innerHTML = localStorage.getItem('Tarefas')
    }
    modo.checked = localStorage.getItem('Modo')
-   console.log(modo.checked)
+   //console.log(modo.checked)
 
    if(modo.checked == 'true'){
       document.body.style.setProperty('--cor-de-fundo', '#1f1f1f')

@@ -44,9 +44,11 @@ button{
    background-color: var(--cor-da-lista);
    color: var(--cor-da-fonte);
    border: 1px solid gray;
+   transition-duration: 200ms;
 }
-button::hover{
+button:hover{
    background-color: var(--cor-de-fundo);
+   transition-duration: 200ms;
 }
 a{
    text-decoration: none;
@@ -65,4 +67,16 @@ span.remove, span.edit{
 }
 span.edit:hover , span.remove:hover{
    background-color: #1111114e;
+}
+.ponteiro{
+   margin-bottom: 5px;
+}
+#relogio{
+   width: 126px;
+   border: 2px solid var(--cor-de-fundo);
+   padding: 3px;
+   margin: auto;
+}
+.ponteiro{
+   width: 30px
 }
