@@ -51,8 +51,6 @@ lista.addEventListener('dblclick',(e=>{
 }))
 let modo = document.getElementById('modo')
 modo.addEventListener('click' , function tema(){
-   localStorage.setItem('Modo', modo.checked)
-   console.log(localStorage.getItem('Modo'))
    if(modo.checked == true){
       document.body.style.setProperty('--cor-de-fundo', '#1f1f1f')
       document.body.style.setProperty('--cor-da-fonte', 'white')
@@ -63,37 +61,3 @@ modo.addEventListener('click' , function tema(){
       document.body.style.setProperty('--cor-da-lista', 'white')
    }
 })
-
-function salvar(){
-   localStorage.setItem('Tarefas', lista.innerHTML)
-   localStorage.setItem('TarefaTxt', lista.innerText)
-}
-function carregar(){
-   if(localStorage.getItem('TarefaTxt') == false){
-      window.alert('Nenhuma tarefa salva')
-   }else{
-      lista.innerHTML = localStorage.getItem('Tarefas')
-   }
-   modo.checked = localStorage.getItem('Modo')
-   //console.log(modo.checked)
-
-   if(modo.checked == 'true'){
-      document.body.style.setProperty('--cor-de-fundo', '#1f1f1f')
-      document.body.style.setProperty('--cor-da-fonte', 'white')
-      document.body.style.setProperty('--cor-da-lista', '#555555')
-   }else{
-      document.body.style.setProperty('--cor-de-fundo', '#d2d2d2')
-      document.body.style.setProperty('--cor-da-fonte', 'black')
-      document.body.style.setProperty('--cor-da-lista', 'white')
-   }
-}
-function apagarCache(){
-   let confirmacao = window.confirm('Você deseja apagar todos os dados salvos?')
-   if(confirmacao == true){
-      localStorage.removeItem('Tarefas')
-      console.log('Apagou os dados')
-   }
-   else{
-      console.log('Dados preservados.')
-   }
-}

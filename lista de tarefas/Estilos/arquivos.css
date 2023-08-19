@@ -1,0 +1,19 @@
+#saves{
+   display: none;
+}
+#saves:hover > p{
+   cursor: pointer;
+   background-color: var(--cor-da-lista);
+}
+#load:hover{
+   position: absolute;
+}
+#load:hover > #saves{
+   display: initial;
+}
+#nome{
+   width: 83px;
+}
+#nome:focus{
+   width: 53px;
+}

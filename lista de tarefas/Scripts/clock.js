@@ -4,7 +4,7 @@ let Psegundo = document.getElementById('segundo')
 
 let comecar = document.getElementById('comecar')
 let alarme = document.getElementById('alarme')
-comecar.addEventListener('click', count)
+comecar.addEventListener('click', ativador)
 alarme.loop = true
 
 Phora.addEventListener('change', esquerda)
@@ -18,16 +18,23 @@ function esquerda(){
 }
 
 var ativo = false
-function count(){
-   if(ativo == false){
-      ativo = true
-      comecar.innerText = 'Parar'
-      var intervalo = setInterval(segundo, 1000)
-   }else{
-      ativo = false
-      comecar.innerText = 'Começar'
-      alarme.pause()
-      clearInterval(intervalo)
+
+function ativador(){
+   switch(ativo){
+      case true:
+         ativo = false
+          comecar.innerText = 'Parar'
+          var tempo = setInterval(segundo, 1000)
+          console.log('O intervalo foi setado.')
+      break
+      case false:
+          ativo = true
+          comecar.innerText = 'Começar'
+          console.log('O intervalo foi parado.')
+          alarme.pause()
+          clearInterval(1)
+          clearInterval(tempo)
+      break
    }
 }
 function segundo(){

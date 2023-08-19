@@ -5,13 +5,15 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Lista de tarefas.</title>
    <link rel="stylesheet" href="lista de tarefas/Estilos/style.css">
+   <link rel="stylesheet" href="lista de tarefas/Estilos/arquivos.css">
 </head>
 <body onload="carregar()">
    <header>
       <h1>Lista de tarefas</h1>
    </header>
    <main>
-      <input type="text" id="Add" placeholder="Adicionar tarefa."><button onclick="salvar()">Salvar</button><button onclick="carregar()">Carregar</button>
+      <input type="text" id="Add" placeholder="Adicionar tarefa."><button onclick="salvar()" id="save">Salvar</button><button id="load">Carregar <div id="saves">
+      </div></button>
    <ul id="lista">
          <li id="1"><span class="texto">1ª tarefa.</span><span class="remove">&#x1F5D9;</span><span class="edit">&#x1F589;</span></li>
          <li id="2"><span class="texto">2ª tarefa.</span><span class="remove">&#x1F5D9;</span><span class="edit">&#x1F589;</span></li>
@@ -20,6 +22,7 @@
          <li id="5"><span class="texto">5ª tarefa.</span><span class="remove">&#x1F5D9;</span><span class="edit">&#x1F589;</span>
          </li>
       </ul>
+      <P><input type="text" maxlength="7" id="nome" placeholder="Nome da lista"></P>
       <button onclick="apagarCache()">Apagar dados</button>
       <input type="checkbox" id="modo">&#x263E;
       <h2>Temporizador</h2>
@@ -27,11 +30,13 @@
          <input type="number" class="ponteiro" id="hora" max="22" min="0" value="00">:
          <input type="number" class="ponteiro" id="minuto" max="59" min="0" value="00">:
          <input type="number" class="ponteiro" id="segundo" max="59" min="0" value="00">
-            <button id="comecar">Começar</button>
+            <button id="comecar">Começar </button>
+            <abbr title="Experimental, F5 to reset">&#x26A0;</abbr>
       </div>
    </main>
    <audio src="lista de tarefas/sons/alarm-clock-short-6402.mp3" id="alarme"></audio>
 </body>
 <script src="lista de tarefas/Scripts/clock.js"></script>
 <script src="lista de tarefas/Scripts/lista.js"></script>
+<script src="lista de tarefas/Scripts/cache.js"></script>
 </html>
