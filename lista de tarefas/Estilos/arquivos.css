@@ -1,7 +1,7 @@
 #saves{
    display: none;
 }
-#saves:hover > p{
+#saves:hover > p:hover{
    cursor: pointer;
    background-color: var(--cor-da-lista);
 }
