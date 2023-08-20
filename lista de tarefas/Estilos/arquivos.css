@@ -5,6 +5,10 @@
    cursor: pointer;
    background-color: var(--cor-da-lista);
 }
+.salves{
+   margin: 3px 0px;
+   font-size: 0.9em;
+}
 #load:hover{
    position: absolute;
 }
@@ -15,5 +19,5 @@
    width: 83px;
 }
 #nome:focus{
-   width: 53px;
+   width: 120px;
 }
