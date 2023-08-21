@@ -7,18 +7,21 @@ function carregar(){
 }
 function salvar(){
    if(nome.value.trim() != '' && lista.innerText != ''){
+      if(saves.innerText.search(nome.value) != -1){
+         localStorage.setItem(nome.value, lista.innerHTML)
+      }else{
          let Slista = document.createElement('p')
          document.body.appendChild(Slista)
          saves.appendChild(Slista)
          Slista.innerText = nome.value.trim()
          Slista.setAttribute('class', 'salves')
-         
          localStorage.setItem(nome.value.trim(), lista.innerHTML)
          localStorage.setItem('salvamentos', saves.innerHTML)
-         carregar()   
+         carregar()
+      }   
    }
 }
-nome.addEventListener('keydown', e=>{
+nome.addEventListener('change', e=>{
    if(nome.value.trim() == ''){
       nome.style.backgroundColor = 'lightcoral'
       document.getElementById('save').style.backgroundColor = 'var(--cor-da-lista)'
