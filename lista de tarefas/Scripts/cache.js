@@ -7,9 +7,6 @@ function carregar(){
 }
 function salvar(){
    if(nome.value.trim() != '' && lista.innerText != ''){
-      if(localStorage.getItem('salvamentos').search(nome.innerText) != -1){
-         localStorage.setItem(nome.value, lista.innerHTML)
-      }else{
          let Slista = document.createElement('p')
          document.body.appendChild(Slista)
          saves.appendChild(Slista)
@@ -19,7 +16,6 @@ function salvar(){
          localStorage.setItem(nome.value.trim(), lista.innerHTML)
          localStorage.setItem('salvamentos', saves.innerHTML)
          carregar()   
-      }
    }
 }
 nome.addEventListener('keydown', e=>{
