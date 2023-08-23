@@ -24,7 +24,7 @@ function ativador(){
       case true:
          ativo = false
           comecar.innerText = 'Parar'
-          var tempo = setInterval(segundo, 1000)
+          tempo = setInterval(segundo, 1000)
           console.log('O intervalo foi setado.')
       break
       case false:
@@ -32,7 +32,6 @@ function ativador(){
           comecar.innerText = 'Começar'
           console.log('O intervalo foi parado.')
           alarme.pause()
-          clearInterval(1)
           clearInterval(tempo)
       break
    }
