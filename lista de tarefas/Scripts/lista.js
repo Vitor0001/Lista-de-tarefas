@@ -50,7 +50,8 @@ lista.addEventListener('dblclick',(e=>{
    }
 }))
 let modo = document.getElementById('modo')
-modo.addEventListener('click' , function tema(){
+modo.addEventListener('click' , tema)
+function tema(){
    if(modo.checked == true){
       document.body.style.setProperty('--cor-de-fundo', '#1f1f1f')
       document.body.style.setProperty('--cor-da-fonte', 'white')
@@ -60,4 +61,4 @@ modo.addEventListener('click' , function tema(){
       document.body.style.setProperty('--cor-da-fonte', 'black')
       document.body.style.setProperty('--cor-da-lista', 'white')
    }
-})
+}

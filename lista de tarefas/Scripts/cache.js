@@ -4,8 +4,17 @@ var saves = document.getElementById('saves')
 
 function carregar(){
    saves.innerHTML = localStorage.getItem('salvamentos')
+   modo.checked = localStorage.getItem('modo')
+   if(localStorage.getItem('modo') == 'true'){
+      modo.checked = true
+      tema()
+   }else{
+      modo.checked = false
+      tema()
+   }
 }
 function salvar(){
+   localStorage.setItem('modo', document.getElementById('modo').checked)
    if(nome.value.trim() != '' && lista.innerText != ''){
       if(saves.innerText.search(nome.value) != -1){
          localStorage.setItem(nome.value, lista.innerHTML)
