@@ -36,12 +36,15 @@ nome.addEventListener('change', e=>{
       document.getElementById('save').style.backgroundColor = 'var(--cor-da-lista)'
    }else{
       nome.style.backgroundColor =  'var(--cor-da-lista)'
-       document.getElementById('save').style.backgroundColor = 'lightgreen'   
+      document.getElementById('save').style.backgroundColor = 'lightgreen'
+      document.getElementById('save').style.textShadow ='1px 1px 1px black'
+      document.getElementById('save').style.fontWeight = 'bolder'
    }
 })
 load.addEventListener('click', e=>{
    if(e.target.tagName == 'P'){
       lista.innerHTML = localStorage.getItem(e.target.innerText)
+      nome.value = e.target.innerText
    }
 })
 load.addEventListener('dblclick', e=>{
