@@ -12,7 +12,7 @@
       <h1>Lista de tarefas</h1>
    </header>
    <main>
-      <input type="text" id="Add" placeholder="Adicionar tarefa."><button onclick="salvar()" id="save">Salvar</button><button id="load">Carregar <div id="saves">
+      <input type="text" maxlength="15" id="nome" placeholder="Nome da lista"><button onclick="salvar()" id="save">Salvar</button><button id="load">Carregar <div id="saves">
       </div></button>
       <ul id="lista">
          <li id="1"><span class="texto">1ª tarefa.</span><span class="remove">&#x1F5D9;</span><span class="edit">&#x1F589;</span></li>
@@ -22,8 +22,7 @@
          <li id="5"><span class="texto">5ª tarefa.</span><span class="remove">&#x1F5D9;</span><span class="edit">&#x1F589;</span>
          </li>
       </ul>
-      <P><input type="text" maxlength="15" id="nome" placeholder="Nome da lista"></P>
-      <button onclick="apagarCache()">Apagar dados</button>
+      <input type="text" id="Add" placeholder="Adicionar tarefa."><button onclick="apagarCache()">Apagar dados</button>
       <input type="checkbox" id="modo">&#x263E;
       <h2>Temporizador</h2>
       <div id="relogio">
@@ -34,6 +33,12 @@
       </div>
    </main>
    <audio src="lista de tarefas/sons/alarm-clock-short-6402.mp3" id="alarme"></audio>
+
+   <dialog id="pop">
+      <p>Você deseja apagar todos os dados salvos?</p>
+      <button onclick="apagar()">Sim</button>
+      <button onclick="fechar()">Não</button>
+   </dialog>
 </body>
 <script src="lista de tarefas/Scripts/clock.js"></script>
 <script src="lista de tarefas/Scripts/lista.js"></script>

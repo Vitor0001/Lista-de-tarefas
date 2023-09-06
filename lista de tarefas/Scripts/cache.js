@@ -30,16 +30,29 @@ function salvar(){
       }   
    }
 }
-nome.addEventListener('change', e=>{
+function apagarCache(){
+   let dialog = document.getElementById('pop')
+   pop.showModal()
+}
+function fechar(){
+   pop.close()
+}
+function apagar(){
+   localStorage.clear()
+   carregar()
+   pop.close()
+}
+nome.addEventListener('keydown', e=>{
    if(nome.value.trim() == ''){
+      nome.value = null
       nome.style.backgroundColor = 'lightcoral'
       document.getElementById('save').style.backgroundColor = 'var(--cor-da-lista)'
    }else{
-      nome.style.backgroundColor =  'var(--cor-da-lista)'
       document.getElementById('save').style.backgroundColor = 'lightgreen'
       document.getElementById('save').style.textShadow ='1px 1px 1px black'
       document.getElementById('save').style.fontWeight = 'bolder'
-   }
+      nome.style.backgroundColor =  'var(--cor-da-lista)'
+   } 
 })
 load.addEventListener('click', e=>{
    if(e.target.tagName == 'P'){

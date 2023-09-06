@@ -15,9 +15,3 @@
 #load:hover > #saves{
    display: initial;
 }
-#nome{
-   width: 83px;
-}
-#nome:focus{
-   width: 120px;
-}

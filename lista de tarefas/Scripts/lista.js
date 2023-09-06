@@ -43,15 +43,20 @@ let Edicao = lista.addEventListener('click',(e=>{
 }))
 lista.addEventListener('dblclick',(e=>{
    if(e.target.className == 'texto'){
-      let feito = document.createElement('del')
-      //console.log(e.target.firstChild)
-      e.target.innerHTML +='<del>'+e.target.innerText+'</del>'
+      let editado = document.createElement('del')
+      editado.innerText = e.target.innerText
+      document.body.appendChild(editado)
+      e.target.appendChild(editado)
       e.target.firstChild.remove()
+   }else{
+      e.target.parentElement.innerText = e.target.innerText
+      e.target.remove()
    }
 }))
 let modo = document.getElementById('modo')
 modo.addEventListener('click' , tema)
 function tema(){
+   salvar()
    if(modo.checked == true){
       document.body.style.setProperty('--cor-de-fundo', '#1f1f1f')
       document.body.style.setProperty('--cor-da-fonte', 'white')

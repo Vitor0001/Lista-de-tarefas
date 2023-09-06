@@ -50,13 +50,8 @@ button:hover{
    background-color: var(--cor-de-fundo);
    transition-duration: 200ms;
 }
-a{
-   text-decoration: none;
-   color: var(--cor-da-fonte);
-}
 span{
    color: var(--cor-da-fonte);
-
    line-break: anywhere;
    width: 240px;
 }
@@ -70,6 +65,7 @@ span.edit:hover , span.remove:hover{
 }
 .ponteiro{
    margin-bottom: 5px;
+   width: 30px
 }
 #relogio{
    width: 126px;
@@ -78,6 +74,10 @@ span.edit:hover , span.remove:hover{
    padding: 3px;
    margin: auto;
 }
-.ponteiro{
-   width: 30px
+#Add{
+   width: 163px;
+}
+#pop{
+   border: none;
+   border-radius: 3px;
 }
