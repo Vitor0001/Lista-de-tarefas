@@ -56,3 +56,9 @@ function segundo(){
       alarme.play()
    }
 }
+function resetar(){
+   Psegundo.value = 0
+   Pminuto.value = 0
+   Phora.value = 0
+   esquerda()
+}

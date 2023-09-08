@@ -49,7 +49,7 @@ nome.addEventListener('keydown', e=>{
       document.getElementById('save').style.backgroundColor = 'var(--cor-da-lista)'
    }else{
       document.getElementById('save').style.backgroundColor = 'lightgreen'
-      document.getElementById('save').style.textShadow ='1px 1px 1px black'
+      document.getElementById('save').style.textShadow ='1px 1px 1px var(--cor-de-fundo)'
       document.getElementById('save').style.fontWeight = 'bolder'
       nome.style.backgroundColor =  'var(--cor-da-lista)'
    } 

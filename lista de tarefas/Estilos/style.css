@@ -11,7 +11,7 @@
 }
 header{
    color: var(--cor-da-fonte);
-   transition-duration: 500ms;
+   transition-duration: 200ms;
 
    font-weight: bold    ;   
    text-align: center;
@@ -19,19 +19,16 @@ header{
 body{
    background-color: var(--cor-de-fundo);
    color: var(--cor-da-fonte);
-
 }
 main{
    background-color: var(--cor-da-lista);
-   transition-duration: 500ms;
+   transition-duration: 200ms;
 
    display: block;
    margin: 5px auto;
-   
    width: 300px;
 
    box-shadow: 4px 5px 3px #00000070;
-
    border: 7px solid transparent;
    border-radius: 8px;
 }
@@ -56,12 +53,12 @@ span{
    width: 240px;
 }
 span.remove, span.edit{
-   transition-duration: 500ms;
+   transition-duration: 300ms;
    border: 3px solid transparent;
    border-radius: 100%;
 }
 span.edit:hover , span.remove:hover{
-   background-color: #1111114e;
+   background-color: var(--cor-de-fundo);
 }
 .ponteiro{
    margin-bottom: 5px;
@@ -78,6 +75,11 @@ span.edit:hover , span.remove:hover{
    width: 163px;
 }
 #pop{
+   color: var(--cor-da-fonte);
+   background-color: var(--cor-da-lista);
    border: none;
    border-radius: 3px;
+}
+#pop::backdrop{
+   background-color: #0000005b;
 }
